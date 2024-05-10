@@ -1,8 +1,7 @@
 import {
     Container, Card, Stepper, Step, StepButton, Typography, Box, Button,
-    StepContent, CardContent, CardHeader, FormControlLabel, Radio, FormControl, RadioGroup, CardActions
+    CardContent, CardHeader, FormControlLabel, Radio, FormControl, RadioGroup, CardActions
 } from "@mui/material";
-// import FormControlContext from "@mui/material/FormControl/FormControlContext";
 import React, { useState, useRef, useEffect } from "react";
 import user from './userData.json';
 
@@ -24,13 +23,8 @@ function QuestionComponents() {
     const [displayMessage, setDisplayMessage] = useState(false);
     const [status, setStatus] = useState(STATUS.default);
     const intervalRef = useRef();
-    const [check1, setCheck1] = useState(false);
-    const [check2, setCheck2] = useState(false);
-    const [check3, setCheck3] = useState(false);
-    const [check4, setCheck4] = useState(false);
-    const [questions, setQuestions] = useState([]);
     const [result, setResult] = useState(false);
-    const [Score, setScore]= useState(0);
+    const [Score, setScore] = useState(0);
 
     const totalSteps = () => {
         return questionNumber.length;
@@ -91,12 +85,6 @@ function QuestionComponents() {
     // onload call timer function
     useEffect(() => {
         start();
-        console.log('user');
-        user[1].map((data) => {
-            // console.log('s', data.label);
-            setQuestions(data.label);
-        })
-        // console.log('s', user[1][0].label);
     }, [])
 
     useEffect(() => {
@@ -118,11 +106,11 @@ function QuestionComponents() {
 
     const start = () => setStatus(STATUS.start);
     const pause = () => setStatus(STATUS.pause);
-    const stop = () => {
-        setStatus(STATUS.pause);
-        setMin(2);
-        setSec(0);
-    }
+    // const stop = () => {
+    //     setStatus(STATUS.pause);
+    //     setMin(2);
+    //     setSec(0);
+    // }
 
     const handleNext = () => {
         const newActiveStep =
@@ -132,33 +120,12 @@ function QuestionComponents() {
                 questionNumber.findIndex((step, i) => !(i in completed))
                 : activePage + 1;
         setActivePage(newActiveStep);
-        setCheck1(false);
-        setCheck2(false);
-        setCheck3(false);
-        setCheck4(false);
     }
 
     const onChangeCheckOne = (e) => {
-        console.log('get answer', e.target.value);
-        console.log("json ans", user[1][activePage].answer);
-        // setCheck1( ? true : false);
-        if(e.target.value == user[1][activePage].answer){
-            setScore((data) => data+1);
+        if (e.target.value == user[1][activePage].answer) {
+            setScore((data) => data + 1);
         }
-    };
-
-    const onChangeCheckTwo = (e) => {
-        // console.log('e 2', e.target.checked);
-        setCheck2(e.target.checked ? true : false);
-    };
-
-    const onChangeCheckThree = (e) => {
-        // console.log('e 3', e.target.checked);
-        setCheck3(e.target.checked ? true : false);
-    };
-    const onChangeCheckFour = (e) => {
-        // console.log('e 4', e.target.checked);
-        setCheck4(e.target.checked ? true : false);
     };
 
     return (
@@ -231,7 +198,7 @@ function QuestionComponents() {
                                                 ) : (
                                                     <Button onClick={handleComplete} variant="contained" color="success">
                                                         {completedSteps() === totalSteps() - 1
-                                                            ? ('Finish',setResult(true))
+                                                            ? ('Finish', setResult(true))
                                                             : 'Save'}
                                                     </Button>
                                                 ))}
