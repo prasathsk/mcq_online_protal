@@ -1,0 +1,138 @@
+[
+    {
+        "count": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+        ]
+    },
+    [
+        {
+            "id": 1,
+            "label": "Which of the following is used in React.js to increase performance?",
+            "options": [
+                "Virtual DOM",
+                "Original DOM",
+                "Both A and B",
+                "None of the above"
+            ],
+            "time": 2,
+            "answer": "Virtual DOM"
+        },
+        {
+            "id": 2,
+            "label": "What is ReactJS?",
+            "options": [
+                "Server-side framework",
+                "user interface framework",
+                "both A and B",
+                "None of the above"
+            ],
+            "time": 2,
+            "answer": "user interface framework"
+        },
+        {
+            "id": 3,
+            "label": "Identify the one which is used to pass data to components from outside",
+            "options": [
+                "Render with arguments",
+                "setState",
+                "PropTypes",
+                "Props"
+            ],
+            "time": 2,
+            "answer": "Props"
+        },
+        {
+            "id": 4,
+            "label": "Who created React.js",
+            "options": [
+                "Jordan Mike",
+                "Jordan Walke",
+                "Tim Lee",
+                "Jordan Lee"
+            ],
+            "time": 2,
+            "answer": "Jordan Walke"
+        },
+        {
+            "id": 5,
+            "label": "In which language is React.js written",
+            "options": [
+                "Python",
+                "JavaScript",
+                "Java",
+                "C++"
+            ],
+            "time": 2,
+            "answer": "JavaScript"
+        },
+        {
+            "id": 6,
+            "label": "What is Babel?",
+            "options": [
+                "JavaScript Compiler",
+                "JavaScript interpreter",
+                "JavaScript transpiler",
+                "None of the above"
+            ],
+            "time": 2,
+            "answer": "JavaScript Compiler"
+        },
+        {
+            "id": 7,
+            "label": "Identify the command used to create a react app.",
+            "options": [
+                "npm install crete-react-app",
+                "npm install -g crete-react-app",
+                "npm crete-react-app",
+                "None of the above"
+            ],
+            "time": 2,
+            "answer": "None of the above"
+        },
+        {
+            "id": 8,
+            "label": "Which of the following port is the default where webpack-dev-server runs?",
+            "options": [
+                "3000",
+                "3300",
+                "5000",
+                "8080"
+            ],
+            "time": 2,
+            "answer": "3000"
+        },
+        {
+            "id": 9,
+            "label": "How many elements can a valid react component return?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "time": 2,
+            "answer": "1"
+        },
+        {
+            "id": 10,
+            "label": "A state in React.js is also known as?",
+            "options": [
+                "Internal Storage",
+                "External Storage",
+                "Permanent Storage",
+                "All of the above"
+            ],
+            "time": 2,
+            "answer": "Internal Storage"
+        }
+    ]
+]
